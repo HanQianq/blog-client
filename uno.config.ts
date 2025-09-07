@@ -23,15 +23,19 @@ export default defineConfig({
     "center-flex": "flex justify-center items-center",
     "wh-full": "w-full h-full",
     "flex-between": "flex justify-between items-center",
-    // 字体样式
-    "title-lg": "text-3xl font-bold",
-    "title-md": "text-2xl font-semibold",
+    "text-hovers": "hover:text-primary transition-linear cursor-pointer",
+    "text-hover-rotate": "hover:rotate-360 transition-linear",
     "border-bottom": "border-b border-border border-solid",
     "btn-primary":
       "px-4 py-2 bg-primary text-white rounded hover:bg-hover shadow",
     "btn-secondary":
       "px-4 py-2 bg-secondary text-white rounded hover:bg-hover shadow",
     card: "p-4 bg-container border border-border rounded shadow",
+    "title-lg": "text-3xl font-bold",
+    "title-md": "text-2xl font-semibold",
+    "text-muted": "text-muted",
+    "text-primary": "text-primary",
+    "text-secondary": "text-secondary",
   },
   rules: [
     // 额外自定义规则（可选）: 例如固定宽高
@@ -40,10 +44,9 @@ export default defineConfig({
       {
         "background-color": "var(--color-bg)",
         color: "var(--color-text)",
-        height: "100vh",
-        width: "100vw",
+        "padding-top": "60px",
       },
     ],
-    ["h-50px", { height: "50px" }],
+    ["transition-linear", { transition: "all 0.5s linear" }],
   ],
 });

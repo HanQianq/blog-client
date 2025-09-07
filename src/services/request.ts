@@ -6,17 +6,18 @@ import type {
   AxiosRequestConfig,
 } from "axios";
 import axios from "axios";
+import { message } from "antd";
 
 // 定义后端返回数据的通用结构
 export interface ApiResponse<T = any> {
   code: number;
-  message: string;
+  msg: string;
   data: T;
 }
 
 // 创建 axios 实例
 const instance: AxiosInstance = axios.create({
-  baseURL: "/api",
+  baseURL: "/api/client",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
@@ -39,9 +40,10 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
   (response: AxiosResponse<ApiResponse>) => {
     const res = response.data;
-    if (res.code !== 200) {
-      console.error("API Error:", res.message);
-      return Promise.reject(new Error(res.message || "Error"));
+    if (res.code !== 0) {
+      message.error(res.msg);
+      console.error("API Error:", res.msg);
+      return Promise.reject(new Error(res.msg || "Error"));
     }
     return res.data;
   },

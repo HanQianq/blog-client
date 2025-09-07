@@ -1,28 +1,22 @@
 import { useTheme } from "@/store/useTheme";
+import { AppstoreOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
 
 export default function ThemeSwitcher() {
-  const { color, mode, setColor, toggleMode } = useTheme();
+  const { mode, toggleMode } = useTheme();
 
   return (
     <div className="flex gap-2 items-center">
-      {/* 主题色切换 */}
-      {["blue", "purple", "orange"].map((c) => (
-        <button
-          key={c}
-          className={`px-4 py-2 rounded ${
-            color === c ? "bg-primary text-white" : "bg-gray-200 text-black"
-          }`}
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          onClick={() => setColor(c as any)}
-        >
-          {c}
-        </button>
-      ))}
-
       {/* 明暗模式切换 */}
-      <button className="px-4 py-2 rounded bg-gray-300" onClick={toggleMode}>
-        {mode === "light" ? "切换暗色" : "切换亮色"}
-      </button>
+      <span
+        className="text-hovers text-hover-rotate mr-4"
+        title="切换模式"
+        onClick={toggleMode}
+      >
+        {mode === "light" ? <SunFilled /> : <MoonFilled />}
+      </span>
+      <span className="text-hovers" title="打开中控台">
+        <AppstoreOutlined />
+      </span>
     </div>
   );
 }

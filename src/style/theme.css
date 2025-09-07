@@ -1,14 +1,28 @@
-/* 默认主题: 蓝色亮色模式 */
+/* 基础变量（默认亮色蓝色主题） */
 :root {
-  --color-primary: #1e90ff; /* 主要颜色 */
-  --color-secondary: #4facfe; /* 次要颜色 */
+  --color-primary: #1e90ff; /* 主色 */
+  --color-secondary: #4facfe; /* 次要色 */
   --color-bg: #ffffff; /* 页面背景 */
   --color-text: #000000; /* 主文字 */
   --color-container-bg: #f5f7fa; /* 内部容器背景 */
   --color-border: #e2e8f0; /* 边框颜色 */
   --color-hover: #d0e6ff; /* 鼠标悬浮背景 */
   --color-shadow: rgba(0, 0, 0, 0.1); /* 阴影 */
-  --color-muted: #718096; /* 次要文字/灰色 */
+  --color-muted: #718096; /* 次要文字 */
+}
+
+/* ----------------- 蓝色主题 ----------------- */
+/* 蓝色亮色模式 */
+[data-theme-mode="light"][data-theme-color="blue"] {
+  --color-primary: #1e90ff;
+  --color-secondary: #4facfe;
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-container-bg: #f5f7fa;
+  --color-border: #e2e8f0;
+  --color-hover: #d0e6ff;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-muted: #718096;
 }
 
 /* 蓝色暗色模式 */
@@ -24,6 +38,7 @@
   --color-muted: #a0aec0;
 }
 
+/* ----------------- 紫色主题 ----------------- */
 /* 紫色亮色模式 */
 [data-theme-mode="light"][data-theme-color="purple"] {
   --color-primary: #9b5de5;
@@ -50,28 +65,29 @@
   --color-muted: #a78ebc;
 }
 
-/* 橙色亮色模式 */
-[data-theme-mode="light"][data-theme-color="orange"] {
-  --color-primary: #f77f00;
-  --color-secondary: #fcbf49;
-  --color-bg: #fff7e6;
+/* ----------------- 绿色主题 ----------------- */
+/* 绿色亮色模式 */
+[data-theme-mode="light"][data-theme-color="green"] {
+  --color-primary: #28a745;
+  --color-secondary: #71c781;
+  --color-bg: #f5fff5;
   --color-text: #1a1a1a;
-  --color-container-bg: #fff2d1;
-  --color-border: #fdd9a2;
-  --color-hover: #ffe3b8;
-  --color-shadow: rgba(247, 127, 0, 0.2);
-  --color-muted: #b76e2b;
+  --color-container-bg: #e6f7e6;
+  --color-border: #cce6cc;
+  --color-hover: #d5f0d5;
+  --color-shadow: rgba(40, 167, 69, 0.2);
+  --color-muted: #5a8d5a;
 }
 
-/* 橙色暗色模式 */
-[data-theme-mode="dark"][data-theme-color="orange"] {
-  --color-primary: #d9822b;
-  --color-secondary: #fcbf49;
-  --color-bg: #2a1a00;
+/* 绿色暗色模式 */
+[data-theme-mode="dark"][data-theme-color="green"] {
+  --color-primary: #1f7a35;
+  --color-secondary: #4da260;
+  --color-bg: #102010;
   --color-text: #ffffff;
-  --color-container-bg: #3a2500;
-  --color-border: #664422;
-  --color-hover: #553300;
-  --color-shadow: rgba(217, 130, 43, 0.5);
-  --color-muted: #d9a466;
+  --color-container-bg: #1a301a;
+  --color-border: #334433;
+  --color-hover: #2a402a;
+  --color-shadow: rgba(31, 122, 53, 0.5);
+  --color-muted: #80b380;
 }

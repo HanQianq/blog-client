@@ -5,7 +5,9 @@ export default function MainLayout() {
   return (
     <div className="app-wrapper">
       <TopBar></TopBar>
-      <Outlet />
+      <div className="max-w-1080px mx-auto">
+        <Outlet />
+      </div>
     </div>
   );
 }
