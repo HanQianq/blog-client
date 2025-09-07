@@ -9,7 +9,7 @@ interface ArticleCardProps {
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
   return (
     <div
-      className="flex h-48 rounded-2xl overflow-hidden border border-border border-solid"
+      className="flex flex-col w-full h-full rounded-2xl overflow-hidden"
       onClick={() => onClick?.(article.id)}
     >
       {article.cover && (
