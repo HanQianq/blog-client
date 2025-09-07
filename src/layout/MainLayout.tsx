@@ -3,7 +3,7 @@ import TopBar from "./TopBar";
 
 export default function MainLayout() {
   return (
-    <div className="container w-full h-full">
+    <div className="app-wrapper">
       <TopBar></TopBar>
       <Outlet />
     </div>

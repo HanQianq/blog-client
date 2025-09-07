@@ -7,26 +7,43 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: "#1e90ff",
-      secondary: "#ff6347",
+      primary: "var(--color-primary)",
+      secondary: "var(--color-secondary)",
+      bg: "var(--color-bg)",
+      text: "var(--color-text)",
+      container: "var(--color-container-bg)",
+      border: "var(--color-border)",
+      hover: "var(--color-hover)",
+      shadow: "var(--color-shadow)",
+      muted: "var(--color-muted)",
     },
   },
   shortcuts: {
     // 元素居中
     "center-flex": "flex justify-center items-center",
+    "wh-full": "w-full h-full",
+    "flex-between": "flex justify-between items-center",
     // 字体样式
     "title-lg": "text-3xl font-bold",
     "title-md": "text-2xl font-semibold",
-    "text-muted": "text-gray-500",
-
-    // 按钮样式
-    "btn-primary": "px-4 py-2 bg-primary text-white rounded hover:bg-blue-600",
+    "border-bottom": "border-b border-border border-solid",
+    "btn-primary":
+      "px-4 py-2 bg-primary text-white rounded hover:bg-hover shadow",
     "btn-secondary":
-      "px-4 py-2 bg-secondary text-white rounded hover:bg-red-600",
+      "px-4 py-2 bg-secondary text-white rounded hover:bg-hover shadow",
+    card: "p-4 bg-container border border-border rounded shadow",
   },
   rules: [
     // 额外自定义规则（可选）: 例如固定宽高
-    ["w-100px", { width: "100px" }],
+    [
+      "app-wrapper",
+      {
+        "background-color": "var(--color-bg)",
+        color: "var(--color-text)",
+        height: "100vh",
+        width: "100vw",
+      },
+    ],
     ["h-50px", { height: "50px" }],
   ],
 });
