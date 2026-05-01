@@ -12,7 +12,7 @@ export default function TopBar() {
     navigate(path);
   };
   return (
-    <div className="top-bar border-bottom flex-between h-60px px-4 w-full fixed top-0 z-10">
+    <div className="top-bar bg-bg border-bottom flex-between h-60px px-4 w-full fixed top-0 z-10">
       <div className="flex items-center">
         <span className="font-bold">与君同的博客</span>
       </div>

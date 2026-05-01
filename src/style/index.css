@@ -1,5 +1,6 @@
 @import url("./reset.css");
 @import url("./theme.css");
+@import url("./article.css");
 
 @font-face {
   font-family: "roboto";
